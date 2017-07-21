@@ -1,0 +1,44 @@
+GIT
+  remote: https://github.com/GeoffWilliams/net-ssh-simple
+  revision: bc0fd91bc6aa3cc13a99b1c1c80879555c19f6ea
+  ref: pty_support
+  specs:
+    net-ssh-simple (1.6.16)
+      blockenspiel (= 0.5.0)
+      hashie (= 3.4.4)
+      net-scp (= 1.2.1)
+      net-ssh (= 3.2.0)
+
+GIT
+  remote: https://github.com/GeoffWilliams/puppetizer
+  revision: a1c7df9a3b468257a18a6299b7b51627e04701be
+  specs:
+    puppetizer (0.1.0)
+      escort (= 0.4.0)
+      inistyle (= 0.1.0)
+      net-ssh-simple (= 1.6.16)
+      ruby-progressbar (= 1.8.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    blockenspiel (0.5.0)
+    escort (0.4.0)
+      nesty
+    hashie (3.4.4)
+    inistyle (0.1.0)
+    nesty (1.0.2)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (3.2.0)
+    ruby-progressbar (1.8.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  net-ssh-simple!
+  puppetizer!
+
+BUNDLED WITH
+   1.13.1

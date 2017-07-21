@@ -1,0 +1,16 @@
+[puppetmasters]
+puppet.demo.internal deploy_code=true pp_role=r_role::puppet::master_git dns_alt_names=puppet,pe-puppet control_repo=https://github.com/GeoffWilliams/r10k-control/
+# Example of how to setup a compile master
+# pupppet-cm.demo.internal compile_master=true mom=puppet.demo.internal dns_alt_names=puppet,pe-puppet.demo.internal lb=puppet.demo.internal
+
+
+[agents]
+lb.demo.internal pm=puppet.demo.internal pp_role=r_role::lb::haproxy
+monitor.demo.internal pm=puppet.demo.internal pp_role=r_role::monitor::nagios_server
+java-a.demo.internal pm=puppet.demo.internal pp_role=r_role::webapp::geoserver
+java-b.demo.internal pm=puppet.demo.internal pp_role=r_role::webapp::geoserver
+lamp-a.demo.internal pm=puppet.demo.internal pp_role=r_role::web_service::lamp_server
+lamp-b.demo.internal pm=puppet.demo.internal pp_role=r_role::web_service::lamp_server
+wp-a.demo.internal pm=puppet.demo.internal pp_role=r_role::webapp::wordpress
+wp-b.demo.internal pm=puppet.demo.internal pp_role=r_role::webapp::wordpress
+# windows has to be done manually...
